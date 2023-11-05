@@ -26,10 +26,10 @@ public class Users implements Serializable {
  /// registra quando faz a modificação
  private LocalDateTime modifyData;
 
- /// registra o nome do usuario que fez a operação de insert na atabela
+ /// registra o nome do usuario que fez a operação de insert tabela
  private String makeBy;
 
- /// registra o usuario que fez a operação de update na atebela
+ /// registra o usuario que fez a operação de update na tabela
  private String modifyBy;
 
  public enum Role{

@@ -1,6 +1,6 @@
 package com.example.demoparkapi.web.controller;
 
-import com.example.demoparkapi.entity.Users;
+import com.example.demoparkapi.entity.User;
 import com.example.demoparkapi.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
@@ -18,8 +18,8 @@ public class UserController {
     private final UserService userService;
 
 @PostMapping
-    public ResponseEntity<Users> create(@RequestBody Users users){
-        Users user = userService.salvar(users);
+    public ResponseEntity<User> create(@RequestBody User users){
+        User user = userService.salvar(users);
         return  ResponseEntity.status(HttpStatus.CREATED).body(user);
 
     }

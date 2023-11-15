@@ -1,6 +1,6 @@
 package com.example.demoparkapi.services;
 
-import com.example.demoparkapi.entity.Users;
+import com.example.demoparkapi.entity.User;
 import com.example.demoparkapi.repository.UsersRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
@@ -12,7 +12,8 @@ public class UserService {
     private final UsersRepository usersRepository;
 
 @Transactional
-    public Users salvar(Users users) {
-        return usersRepository.save(users);
+    public User salvar(User user) {
+        return usersRepository.save(user);
     }
 }
+    

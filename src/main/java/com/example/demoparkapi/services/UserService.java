@@ -13,7 +13,17 @@ public class UserService {
 
 @Transactional
     public User salvar(User user) {
-        return usersRepository.save(user);
+    return usersRepository.save(user);
+    }
+
+
+@Transactional(readOnly = true)
+    public User searchByID(Long id) {
+    return usersRepository.findById(id).orElseThrow(
+            () -> new RuntimeException("Usuário não encontrado")
+    );
     }
 }
+
+
     
